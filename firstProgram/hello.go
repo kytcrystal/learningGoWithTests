@@ -1,17 +1,39 @@
 package main
 
 // import a package that contains Println function
-import "fmt"
+// import "fmt"
 
-const englishHelloPrefix = "Hello, "
+const (
+	french  = "French"
+	spanish = "Spanish"
+	italian = "Italian"
 
-func Hello(name string) string {
+	englishHelloPrefix = "Hello, "
+	spanishHelloPrefix = "Hola, "
+	frenchHelloPrefix  = "Bonjour, "
+	italianHelloPrefix = "Ciao, "
+)
+
+func Hello(name string, language string) string {
+	//public functions start with uppercase
 	if name == "" {
 		name = "World"
 	}
-	return englishHelloPrefix + name
+	return greetingPrefix(language) + name
 }
 
-func main() {
-	fmt.Println(Hello("Chris"))
+func greetingPrefix(language string) (prefix string) {
+	//private functions start with lowercase
+	//prefix is a named return value
+	switch language {
+	case french:
+		prefix = frenchHelloPrefix
+	case italian:
+		prefix = italianHelloPrefix
+	case spanish:
+		prefix = spanishHelloPrefix
+	default:
+		prefix = englishHelloPrefix
+	}
+	return prefix
 }
