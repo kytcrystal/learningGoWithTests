@@ -1,11 +1,11 @@
 # Notes 
 
 ## Getting Started in Windows
-Initialize a module:
+Initialize a Module:
 
     go mod init <modulepath>
 
-Running Go program:
+Running Go Program:
 
     go run <Program.go>
 
@@ -13,7 +13,11 @@ Running Tests:
 
     go test
 
-Launching Go documentation locally: 
+Check Test Coverage:
+
+    go test -cover
+
+Launching Go Documentation Locally: 
 
     godoc -http :8000
 
