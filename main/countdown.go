@@ -19,10 +19,10 @@ func (s *SpySleeper) Sleep() {
 	s.Calls++
 }
 
-const finalWord = "Go!"
-const countdownStart = 3
-
 // ------------------------------------------------
+
+const countdownStart = 3
+const finalWord = "Go!"
 
 func Countdown(out io.Writer, sleeper Sleeper) {
 	for i := countdownStart; i > 0; i-- {

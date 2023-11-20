@@ -3,7 +3,7 @@ package dictionary
 type Dictionary map[string]string
 
 const (
-	ErrNotFound   		= DictionaryErr("WORD NOT FOUND")
+	ErrNotFound         = DictionaryErr("WORD NOT FOUND")
 	ErrWordExists       = DictionaryErr("cannot add word because it already exists")
 	ErrWordDoesNotExist = DictionaryErr("cannot update word because it does not exist")
 )
@@ -50,5 +50,5 @@ func (d Dictionary) Update(word string, newTranslation string) error {
 }
 
 func (d Dictionary) Delete(word string) {
-	delete(d,word)
+	delete(d, word)
 }
