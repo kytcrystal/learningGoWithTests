@@ -11,11 +11,11 @@ type Sleeper interface {
 	Sleep()
 }
 
-type SpySleeper struct {
+type MockSleeper struct {
 	Calls int
 }
 
-func (s *SpySleeper) Sleep() {
+func (s *MockSleeper) Sleep() {
 	s.Calls++
 }
 

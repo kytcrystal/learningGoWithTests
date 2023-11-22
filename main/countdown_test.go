@@ -7,9 +7,9 @@ import (
 
 func TestCountdown(t *testing.T) {
 	buffer := &bytes.Buffer{}
-	spySleeper := &SpySleeper{}
+	mockSleeper := &MockSleeper{}
 
-	Countdown(buffer, spySleeper)
+	Countdown(buffer, mockSleeper)
 
 	got := buffer.String()
 	want := `3
@@ -21,7 +21,7 @@ Go!`
 		t.Errorf("got %q want %q", got, want)
 	}
 
-	if spySleeper.Calls != 3 {
-		t.Errorf("not enough calls to sleeper, want 3 got %d", spySleeper.Calls)
+	if mockSleeper.Calls != 3 {
+		t.Errorf("not enough calls to sleeper, want 3 got %d", mockSleeper.Calls)
 	}
 }

@@ -9,7 +9,7 @@ const (
 	italian = "Italian"
 
 	englishHelloPrefix = "Hello, "
-	spanishHelloPrefix = "Hola, "
+	spanishHelloPrefix = "Halo, "
 	frenchHelloPrefix  = "Bonjour, "
 	italianHelloPrefix = "Ciao, "
 )
